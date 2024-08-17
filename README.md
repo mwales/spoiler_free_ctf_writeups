@@ -48,6 +48,7 @@ control access
 
 ```
 cd spoiler_free_ctf_writeups
+git submodule update --init --recursive
 docker build -t ctf_wiki
 docker run -d -p 5658:80 --restart unless-stopped ctf_wiki
 ```
