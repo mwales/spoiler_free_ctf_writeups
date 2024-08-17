@@ -77,5 +77,13 @@ Update the graphics using the media manager under the admin account
 Add placeholder landing pages for each challenge (add a short placehold page for each flag in your
 CTF).
 
+# Screenshots
 
+![Start page](screenshots/start_page.png)
+
+![Link generator](screenshots/link_generator.png)
+
+![Challenge landing page](screenshots/chal_landing_page.png)
+
+![Sample writeup](screenshots/sample_writeup.png)
 
