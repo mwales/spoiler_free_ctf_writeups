@@ -1,0 +1,13 @@
+==== Sample Challenge solve by l33t hackers ====
+
+We solved this challenge using all of your favorite hacker tools like the file command, and strings, and occasionally binwalk.
+
+Let me tell you something really crazy we did, you'll never believe this.  We hooked our Commodore 64 up to the internet to solve this challenge in basic!
+
+Check out our sweet code we wrote:
+
+<code basic4gl>
+10 REM L33T HACKERS
+20 PRINT "FLAG: wildcat{sample}"
+30 GOTO 20
+</code>

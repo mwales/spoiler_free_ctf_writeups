@@ -1,0 +1,33 @@
+====== Welcome to Spoiler Free CTF writeups!!! ======
+
+This is a wiki for storing the writeups for long-running CTF challenges.  Players can solve challenges and post writeups here, and won't spoil the challenge for other players.
+
+This works by hiding the writeups for challenges on the wiki.  There is no simple way to browse the writeups like [[https://ctftime.org/writeups|CTF Time write-ups page]].  On this website you will need to present your flag to generate a link that brings you the write-ups page for that challenge.
+
+To search for a writeup page, go to this page that has the [[http://127.0.0.1:5658/writeups.html|link generation tool]]!
+
+=== How does this work? ===
+
+Challenge writeups are hidden in this wiki.  Any wiki page that starts with the word challenge won't be in any of the wiki indexes or available for searching.  That makes it also important to make sure when you submit your writeup, you name it properly!
+
+The link generation tool creates links to the writeup collection for your challenge by computing the MD5 hash of the challenge flag.  This assumes all challenges will have their own unique flag, which is usually a very safe assumption.  
+
+Note: This also means that the flags are not a unique flag based on the team.  If your CTF has some kind of anti-flag sharing feature that creates unique flags for each team for each challenge, you will need to adjust the javascript code in writeups.html file to generate a common hash for this site to work.
+
+To find the challenge writeups, compute the hash of you flag.
+
+To search for a writeup (or to submit your writeup), you will need to [[http://writeups.html|search for the challenge]], and the only way you are can search for a challenge is via the flag.  If your flag gives you a blank page, you likely don't have the correct flag (or the challenge author forgot to create the writeup placeholder page).
+
+You can then from that page read other writeups, or submit your own.
+
+The hashes for the page names are created using the following simple algorithm:
+
+<code>
+echo -n "wildcat{sample}" | md5sum
+6f648fe60290f3ff9a8222f15aa90adb  -
+</code>
+
+For instance, the writeup for the challenge that has the flag sample, would have the following name:
+[[challenge_6f648fe60290f3ff9a8222f15aa90adb|challenge_6f648fe60290f3ff9a8222f15aa90adb]]
+
+If this is confusing at all, just delete this whole explanation block and tell the players to just use the link generation page!

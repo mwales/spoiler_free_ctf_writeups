@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Wildcat Writeups!</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+	</head>
+	<body>
+
+		<form id="md5form">
+			<h2>Enter the flag to find writeup page!</h2>
+			<label for="inputString">wildcat{sample}</label><br>
+			<input type="text" id="inputString" name="inputString"><br><br>
+			<input type="button" value="Generate Link" onclick="generateLink()" >
+			
+		</form>
+
+		<p id="result">Enter the flag above and click generate button</p>
+		<p id="hashLink">Link will be generated here</p>
+
+		<script>
+			function generateLink() {
+				var inputString = document.getElementById('inputString').value;
+				var md5hash = CryptoJS.MD5(inputString).toString();
+				var hashLink = document.createElement('a');
+				hashLink.innerText = "Link to writeup!";
+				hashLink.href = window.location.origin + "/doku.php?id=challenge_" + md5hash;
+				hashLink.style.display = "block";
+
+
+				docElem = document.getElementById('hashLink');
+				docElem.innerHtml = "";
+				docElem.appendChild(hashLink);
+				document.getElementById('result').innerText = "Hash: " + md5hash;
+			}
+		</script>
+
+		<p>After clicking on the link, if you reach a blank page, you likely don't have the correct flag!</p>
+
+	</body>
+</html>
+

@@ -1,0 +1,22 @@
+===== Writeups for sample challenge =====
+
+CTF organizers should have a landing page for each challenge in their CTF.  That will help players verify that their flag doesn't have a typo.  If a player gets to an empty landing page, they should double-check their flag is correct.
+
+Here are some links to sample writeups:
+
+[[challenge_sample_flag_writeup_by_l33t_hackers|l33t_hackers writeup]]
+
+[[challenge_sample_flag_writeup_by_th3_n00b5|th3_n00b5 writeup]]
+
+You can create a link to your own writeup by editing the landing page and adding a link with the following syntax:
+
+<code>
+[[challenge_babys_first_pwn_by_your_team_name|your_team_name writeup]]
+</code>
+
+===Very Important:  Make sure your page name starts with the word challenge_ so it's stays hidden! ===
+
+===Also Important:  Page name should be unique ===
+
+After you create the link, it should be red because no one created the page.  Once you click a red link the wiki ask you if you want to create a new page.  Edit that page using the doku wiki syntax!
+
