@@ -14,11 +14,18 @@ writeups.
 
 # Default accounts and credentials
 
-* Administrative  admin:password
-* Student (is a member of a group called studentgroup)         student:password2
+| Username      | Password        | Group          | Notes                                                     |
+| --------------| --------------- | -------------- | --------------------------------------------------------- |
+| admin         | password        | admin          | Can access media manager (see index of pictures uploaded) |
+| student       | password2       | studentgroup   |                                                           |
 
-You could add many students and put all of them in the studentgroup group and
-disable anonymous edits, or share the single student account with all of the students.
+By default, the wiki will allow anonymous editting.
+
+You can login as the admin, and reconfigure the ACL to only have @ALL be able to read the wiki, and then add
+the edit permission for the studentgroup to moderately control the wiki from defacement.
+
+You could also add many individual students and put all of them in the studentgroup group and more tightly
+control access
 
 # Customizations performed on standard doku install for this project
 
@@ -35,11 +42,40 @@ disable anonymous edits, or share the single student account with all of the stu
     Only admins can see it
   * Disable auto updates (updatecheck)
 
+# How to install
 
-# Todo
+## From git:
 
-[ ] Do I need to create conf/acl.auth.php?
-[ ] Copy over doku artwork with cool hacker artwork
+```
+cd spoiler_free_ctf_writeups
+docker build -t ctf_wiki
+docker run -d -p 5658:80 --restart unless-stopped ctf_wiki
+```
+
+## From docker hub
+
+```
+docker pull mwales/spoiler_free_ctf_writeups
+docker run -d -p 5658:80 --restart unless-stopped mwales/spoiler_free_ctf_writeups
+```
+
+## Customization required
+
+You can replace port 5658 with any port number that you want.
+
+After you start the container.  Login using the administrator and update the administrator account
+password.
+
+If you want to disable anonymous edits, change the student password and update the ACL settings.
+
+On the start page, the link to the "link generation tool" is an exteral link that just has the
+localhost IP address, update this link to point at the server's domain name and the port that
+you exposed for docker.
+
+Update the graphics using the media manager under the admin account
+
+Add placeholder landing pages for each challenge (add a short placehold page for each flag in your
+CTF).
 
 
 
