@@ -1,0 +1,3 @@
+[submodule "disableactionsbygroup"]
+	path = disableactionsbygroup
+	url = https://github.com/adron1111/disableactionsbygroup.git

@@ -10,15 +10,9 @@ To search for a writeup page, go to this page that has the [[http://127.0.0.1:56
 
 Challenge writeups are hidden in this wiki.  Any wiki page that starts with the word challenge won't be in any of the wiki indexes or available for searching.  That makes it also important to make sure when you submit your writeup, you name it properly!
 
-The link generation tool creates links to the writeup collection for your challenge by computing the MD5 hash of the challenge flag.  This assumes all challenges will have their own unique flag, which is usually a very safe assumption.  
+The link generation tool creates links to the writeup collection for your challenge by computing the MD5 hash of the challenge flag.  This assumes all challenges will have their own unique flag, which is usually a very safe assumption.  This hash gets directly appended to page name.
 
 Note: This also means that the flags are not a unique flag based on the team.  If your CTF has some kind of anti-flag sharing feature that creates unique flags for each team for each challenge, you will need to adjust the javascript code in writeups.html file to generate a common hash for this site to work.
-
-To find the challenge writeups, compute the hash of you flag.
-
-To search for a writeup (or to submit your writeup), you will need to [[http://writeups.html|search for the challenge]], and the only way you are can search for a challenge is via the flag.  If your flag gives you a blank page, you likely don't have the correct flag (or the challenge author forgot to create the writeup placeholder page).
-
-You can then from that page read other writeups, or submit your own.
 
 The hashes for the page names are created using the following simple algorithm:
 
