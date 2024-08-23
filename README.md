@@ -41,6 +41,9 @@ control access
   * Hide the media manager from most users (disableactions, disableactionsbygroup).
     Only admins can see it
   * Disable auto updates (updatecheck)
+* There is a show() function in DisplayRow class that this will version will
+  not execute. This prevents a media-manager like display of all images when
+  a user goes to upload a new image.  Removed via sed in Dockerfile.
 
 # How to install
 

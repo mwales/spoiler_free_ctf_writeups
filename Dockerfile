@@ -24,3 +24,6 @@ COPY --chown=www-data:www-data disableactionsbygroup /var/www/html/lib/plugins/d
 # Copy over initial markdown content / sample pages
 COPY --chown=www-data:www-data --chmod=0644 start.txt challenge_6f648fe60290f3ff9a8222f15aa90adb.txt challenge_sample_flag_writeup_by_l33t_hackers.txt /var/www/html/data/pages/
 
+# Disable the media manager-like features in the image upload utility
+RUN sed -i -e 's/public function show()/public function show() { } public function dead_code_show()/g' /var/www/html/inc/Ui/Media/DisplayRow.php
+
